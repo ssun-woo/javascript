@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript ex04</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	const num01 = prompt("첫 값 입력 : ");
+	const num02 = prompt("두 값 입력 : ");
+	console.log(typeof num01);
+	console.log(typeof num02);
+	document.write(num01 + num02 + "<br>");
+	document.write(Number(num01) + parseInt(num02) + "<br>");
+	document.write(Number(num01) + parseFloat(num02) + "<br>");
+	document.write(Number(num01 / num02) + "<br>");
+	/* 자바스크립트의 경우에는 나누기를 하면 소수점형태로 출력된다 */
+	document.write(parseInt(num01 / num02) + "<br>");
+	/* 몫만 출력하기 위해서는 형태를 변환해줘야 한다 */
+	
+</script>
+
+</body>
+</html>

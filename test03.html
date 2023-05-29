@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	/* 입력한 데이터가 3의 배수인 경우 출력하시오 */
+	const num1 = prompt("수(3의 배수) 입력 : ");
+	if(num1%3==0){
+		document.write(num1);
+	}
+	
+	/* 입력한 수의 절대값을 구하는 프로그램을 작성하시오*/
+	const num2 = prompt("수(절대값) 입력 : ");
+	if(num2 < 0){
+		num2 -= Number(num2);
+	}
+	document.write(num2);
+	
+	/* 두 수를 입력 받아 큰 수를 출력하시오*/
+	const num3 = prompt("첫번째 수 입력 : ");
+	const num4 = prompt("두번째 수 입력 : ");
+ 	let big;
+	if(num3>=num4){
+		big = num3;
+	}else if(num4>num3){
+		big = num4;
+	}
+	document.write(`큰 수는 ${big}입니다`);
+	
+	/* 세 수를 입력받아 큰 수를 출력하시오 */
+	const num5 = prompt("첫번째 수 입력 : ");
+	const num6 = prompt("두번째 수 입력 : ");
+	const num7 = prompt("세번째 수 입력 : ");
+	
+	if(num5>=num6 && num5>=num7){
+		big = num5;	
+	}else if(num6>=num5 && num6>=num7){
+		big = num6;
+	}else if(num7>=num5 && num7>=num6){
+		big = num7;
+	}
+	
+	document.write("가장 큰수 : " + big);
+	
+	/* 두 수를 입력받아 큰 수가 짝수이면 출력하시오 */
+	const num8 = prompt("첫번째 수 입력 : ");
+	const num9 = prompt("두번째 수 입력 : ");
+	let bigger;
+	
+	bigger = (num8>=num9)? num8 : num9;
+	
+	if(bigger % 2 == 0){
+		document.write(bigger)
+	}else{
+		document.write("큰수가 짝수가 아닙니다")
+	}
+	
+	
+	/* 두 수를 입력 받아 합이 짝수이고 3의 배수인 수를 출력하시오 */
+	const num10 = prompt("첫번째 수 입력 : ");
+	const num11 = prompt("두번째 수 입력 : ");
+	let sum = Number(num10) + Number(num11);
+	if(sum % 2 == 0 && sum % 3 == 0){
+		document.write(sum);
+	}
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
