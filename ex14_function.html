@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	/*익명함수(화살표함수)*/
+	
+	
+	/* let func = function(){
+		console.log("화살표 함수");
+	}
+	
+	func(); */
+	
+	let func = () => {
+		console.log("화살표 함수");
+		return 100;
+	}
+	
+	document.write(func());
+	
+	
+	const func01 = () => {10 + 20;}
+	const func02 = () => 10 + 20;	// 중괄호가 없으면 바로 return함
+	const func02_2 = (n) => (n>10)? 10 : 5; 
+	const func03 = () => {			// 중괄호가 있을땐 반드시 return을 적어줘야함
+		return 10 + 20;
+	}
+	
+	
+	document.write("<hr>")
+	document.write(func01() + "<br>")
+	document.write(func02() + "<br>")
+	document.write(func03() + "<br>")
+	
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

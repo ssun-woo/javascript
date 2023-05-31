@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	/* 익명함수 : 변수에 함수를 저장해서 사용하는 방법 */
+	let sumFunc = function(x,y){
+		alert("익명함수 실행");
+		// 알림창을 띄워줌
+		return x+y;
+	}
+	/* 익명함수는 실행할때 메모리에 올려서 실행하고 바로 사라짐 (메모리가 효율적임) */
+	/* 앞으로 자주 사용해서 눈에 익힐것 */
+	
+	function sumFunc02(){
+	/* 일반함수는 메모리에 올려두고 기억해두고 사용함 */
+	}
+	
+	document.write(sumFunc(10,20));
+	
+	/* 즉시 실행 함수 */
+	let result = (function test(){
+		alert("즉시 실행!!!")
+		return "즉시 실행함수는 초기화 목적으로 사용한다.";
+	})();
+	/* 호출하지 않아도 실행됨(let result 지우고 밑에 지워도 alert 실행됨)*/
+	
+	document.write(result);
+
+	
+	let name = "홍길동";
+	(function test1(n){
+		alert(n+"님 반갑. 즉시 실행!")
+	})(name);
+	// 뒤에 들어오는 name이 n으로 전달됨
+	
+	
+	
+	
+	
+	
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

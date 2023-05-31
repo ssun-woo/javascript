@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		/*
+		 function test01(){
+		 let num = 100;
+		 let num = 200;
+		 // let의 경우에는 같은 변수명으로 재선언이 불가능함 
+		 console.log("num : " + num);
+		 }
+		
+		 test01();
+		
+		 console.log("num : " + num);
+		 */
+
+		/*
+		 function test02(){
+		 var num2 = 100;
+		 var num2 = "aaaa";
+		 num2 = "bbb";
+		 // var의 경우에는 같은 변수명으로 재선언이 가능하다(생략도 가능)
+		 console.log("n2 : " + num2);
+		 }
+		
+		 test02();
+		
+		 console.log("밖에 n2 : " + num2);
+		 */
+
+		const n1 = 10;
+		const n2 = 20;
+		const sum = sunFunc(n1, n2);
+
+		function sunFunc(num1, num2) {
+			const sum = num1 + num2;
+			return sum;
+		}
+
+		document.write(`${n1} + ${n2} = ${sum}`);
+
+		function test03() {
+			const num = 95;
+			const txt = "안녕하세요";
+			// return num, txt;
+			// return값에 여러가지를 적으면 마지막 값이 return됨
+			// 여러개를 넘겨줄때는 배열로 넘겨준다
+
+			return [ num, txt ]; // const arr = [num, txt]; return arr; 이런식으로도 사용 가능
+
+		}
+
+		const result = test03();
+		document.write("<hr>" + result);
+		document.write("<br>" + result[0]);
+		document.write("<br>" + result[1]);
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
