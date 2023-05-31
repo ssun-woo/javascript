@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	#h3 {color : red;}
+</style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	const clickEvent = () => {
+		// alert("실행??");
+		const name = document.getElementById("name");
+		console.log(name);
+		// getElementById를 통해 id값으로 input 태그를 불러올 수 있다
+		// 현재 name에는 id가 name인 input태그가 저장돼있다
+		
+		name.value = "안녕하세요";
+		// 그 안에 해당하는 속성을 부여할 수 있다
+		
+		name.style.background = "red";
+		// style도 마찬가지로 접근 가능
+		
+		
+		const name2 = document.querySelector("#name2");
+		// querySelector : 해당하는 태그를 가져온다
+		// class는 .으로, id는 #을 붙여서 불러올 수 있다
+		console.log(name2);
+		
+		name2.value = name.value;
+		name.value= "";
+	}
+
+
+
+</script>
+
+<script type="text/javascript">
+	
+	const innerTest = () => {
+		const txt = document.querySelector(".txt");
+		console.log(txt);
+		let msg = "<h3 id='h3'>내용 바꾸기</h3>";
+		txt.innerHTML = msg;
+		/* html 태그들은 innerHTML을 사용해야 한다 */
+	}
+
+
+</script>
+
+<label class="txt">텍스트 값</label><br>
+<span onclick="innerTest()">클릭</span>
+
+
+<hr>
+
+<input type="text" id = "name" placeholder="input name"><br>
+<input type="text" id = "name2" placeholder="input name2"><br>
+<input type="button" value="버튼" onclick="clickEvent()"><br>
+								<!-- 클릭이 되면 해당 함수를 실행한다 -->
+								
+
+
+</body>
+</html>
