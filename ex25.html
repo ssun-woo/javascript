@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+	
+	
+<script type="text/javascript">
+	var strat;
+	window.onload = () =>{
+		start = document.querySelector("#start");
+		console.log("시작 : " + start);
+		start.addEventListener("click", start1);
+		start.addEventListener("click", start2);
+		/* 구버전 인터넷은 인식을 못 할 수도 있다*/
+	}
+	
+	var e2;
+	
+	const start2 = () => {
+		e2 = setInterval(timeStart, 1000);
+		// 지정한 시간마다 반복시킨다
+	}
+	
+	const timeStart = () =>{
+		var d = new Date();
+		document.getElementById("clock2").innerHTML = d.toLocaleString();
+	}
+	
+	
+	const start1 = () => {
+		const today = new Date();
+		console.log(today);
+		
+		// 원하는 방식이 아니라면 포멧을 통해 바꿀수 있다
+		let time = today.getMonth() + 1 + "월 ";
+		time += today.getDate() + "일 ";
+		time += today.getHours() + "시 ";
+		time += today.getMinutes() + "분 ";
+		time += today.getSeconds() + "초 ";
+		document.getElementById("clock").innerHTML = time;
+		e = setTimeout(start1, 1000);
+		
+	}
+	const end = () => {
+		clearTimeout(e);
+		// 시간이 나오는 함수를 종료한다
+	}
+	
+	const end2 = () => {
+		clearInterval(e2);
+	}	
+</script>
+	<!-- script 순서에 따라 출력되는 결과가 다르다  
+		하지만 window.onload를 사용하면 먼저 실행되기 때문에 결과가 나옴-->
+	
+	<div id="clock"></div>
+	<button id="start">시작</button>
+	<button onclick="end(); end2();">종료</button>
+	<div id="clock2"></div>
+	
+
+</body>
+</html>

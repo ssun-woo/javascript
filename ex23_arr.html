@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var userInfo = [
+		{ id : "aaa", name : "홍길동", age : 20},
+		{ "id" : "bbb", "name" : "김개똥", "age" : 30},
+		{ id : "ccc", name : "고길동", age : 40}
+	]
+	
+	window.onload = () => {
+		const div = document.querySelector(".test");
+		let msg = `아이디 : ${userInfo[0].id}<br>
+					이름 : ${userInfo[0].name}<br>
+					나이 : ${userInfo[0].age}<br>`;
+		div.innerHTML = msg;
+		
+		
+		const id = "bbb";
+		const result = userInfo.filter( (d) => d.id === id);
+		console.log(result);
+		/* 실행 후 console에서 확인 가능 */
+		
+		
+		for(let i=0; i<userInfo.length;i++){
+			console.log( userInfo[i].age - 1 );
+		}
+		
+		userInfo.forEach( (d)=> {
+			console.log(d.age-1);
+		});
+		// 위와 아래는 같은 식, 편한걸 사용하면된다
+		
+		
+		const ddd = userInfo.map( (d2)=> {
+			d2.age = d2.age-1
+			return d2;
+		});
+		
+		console.log(ddd);
+		
+		console.log("======================");
+		
+		/* 자바의 향상된 for문 */
+		for(let user of userInfo){
+			// userInfo의 정보를 user변수에 담는다
+			console.log(user);
+		};
+	}
+		
+	
+
+</script>
+
+	<div class="test"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

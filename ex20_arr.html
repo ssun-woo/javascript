@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	let kdata = ['서울', '부산'];
+	document.write("기본 배열 : " + kdata + "<br>");
+	kdata.push("인천", "세종");
+	document.write("push 배열 : " + kdata + "<br>");
+	/* push : 가장 마지막에 데이터를 추가한다 */
+
+	kdata.pop();
+	document.write("pop 배열 : " + kdata + "<br>");
+	/* pop : 가장 마지막 값을 빼낸다 */
+	
+	kdata.unshift("111","222");
+	document.write("unshift 배열 : " + kdata + "<br>");
+	/* unshift : 가장 앞에 데이터 추가 */
+
+	kdata.shift();
+	document.write("shift 배열 : " + kdata + "<br>");
+	/* shift : 가장 앞에 데이터 삭제 */
+	
+	/* 위의 명령어들은 자신의 값을 바꾸는거라 따로 저장할 필요가 없다 */
+	
+	document.write("<hr>");
+	
+	var d = kdata.concat("추가", "데이터");	// 앞에 let을 안붙여도 오류가 나지는 않는다 
+	document.write("concat 배열 : " + d + "<br>");
+	/* concat도 추가하는 데이터지만 자기 자신을 바꾸는 명령어가 아니라서 저장이 되진 않는다 */
+	
+	
+	
+	
+	
+
+
+</script>
+
+
+
+
+</body>
+</html>

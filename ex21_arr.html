@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	const data = [111,222,333];
+	const printArr = (item, index) => {
+		document.write(`배열 데이터 ${index} = ${item}<br>`);
+	}
+	
+	data.forEach(printArr);
+	// forEach : return을 사용할 수 없고 출력만 가능
+	
+	document.write(`=== foreach ===<br>`);
+	
+	data.forEach( (item, index) => {
+		document.write(`배열 데이터 ${index} = ${item}<br>`);
+	});
+	// 실제로 사용하는건 이렇게 많이 사용함 
+	
+	const mapArr = (value) =>{
+		return `<b style="color : red;">${value}</b>`;
+	}
+	
+	const mapArr2 = (value) => `<b style="color : blue;">${value}</b>`;
+	
+	document.write(`======<br>`);
+	
+	const mapData = data.map(mapArr);
+	const mapData22 = data.map((value)=>`<b style="color : blue;">${value}</b>`);
+	// 일회성이기 때문에 함수를 따로 정의하지않고 이렇게 바로 사용해도됨
+	
+	document.write(mapData);
+	/* map은 return값을 사용할 수 있다 */
+	// 각 배열은 <b></b>로 묶인 것들이 다시 배열로 들어간다
+	
+	document.write("<br>" + mapData[0]);
+	document.write(mapData22);
+	
+	
+	
+	
+	
+	
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
