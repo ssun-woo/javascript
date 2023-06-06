@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	// var result = confirm("처음방문?"); 	// 확인시 true, 취소 시에는 false반환
+	// console.log(result);
+	
+	const myClick = () => {
+		// window.open();	// window가 들어가는 것들은 생략해도 실행됨
+		// window.open("https://www.naver.com");	// 새창에서 네이버실행
+		// window.open("https://www.naver.com", "_self");	// 현재 자신의 창을 네이버로 실행
+		window.open("https://www.naver.com", "", "width=500, height=500");
+	}
+	
+	const myClick2 = () => {
+		window.open("popup.html", "", "width=500, height=500");
+	}
+
+</script>
+
+<input type="button" value="새 창" onclick="myClick()">
+<input type="button" value="새 창2" onclick="myClick2()">
+
+</body>
+</html>

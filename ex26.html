@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	var img;
+	
+	const add = () => {
+		img = document.createElement("img");		// "img"라는 태그를 만드는 명령어
+		img.src = "ryon.png";
+		img.width = 100
+		img.style.height = "100px";
+		// img.setAttribute("width", 100);
+		// img.setAttribute("height", 100);
+		// img.setAttribute("src", "이미지 경로");
+		document.getElementById("test").appendChild(img);	// 그 자식에 누를때마다 계속 추가됨
+		// document.getElementById("test").innerHTML = img; 
+		// >> 해당하는 태그에 "img"를 추가하는것(계속 하나만 나옴)
+	}
+	
+	const remove = () => {
+		let items = document.querySelector("#test");
+		console.log( items.childNodes );
+		items.removeChild( items.childNodes[0] );
+		// 이런 방법으로 삭제할 수도 있다
+		// document.querySelector("img").remove();
+		
+		
+	}
+
+</script>
+	
+<p id="test">
+	<b>aaa</b>
+	<span>bbb</span>
+</p>
+<a href="#" onclick="add()">[이미지 추가]</a>
+<a href="#" onclick="remove()">[이미지 삭제]</a>
+	
+	
+</body>
+</html>
